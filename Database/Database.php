@@ -120,6 +120,6 @@ class Database implements DbQueryInterface
         }
 
         $result = mysqli_query($this->connect, $this->query);
-        return mysqli_fetch_all($result);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 }

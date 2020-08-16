@@ -2,23 +2,52 @@
 
 
 namespace Controllers\User;
+use \Controllers\Interfaces\ControllerInterface;
+use Models\User;
 
-
-class UserController
+class UserController implements ControllerInterface
 {
 
-    public function index()
+    function index()
     {
-        echo "hello User Controller Index Method";
+        // TODO: Implement index() method.
+        $user = new user();
+        $user = $user->select(['*'])->get();
+
+        foreach ($user as $key => $value){
+
+            echo $value['username']."<br>";
+        }
+
     }
 
-    public function edit($id = null){
-
-        echo 'User ID = '.$id;
+    function create()
+    {
+        // TODO: Implement create() method.
     }
 
-    public function update(){
+    function store()
+    {
+        // TODO: Implement store() method.
+    }
 
-        echo 'Update User Data.';
+    function show($id)
+    {
+        // TODO: Implement show() method.
+    }
+
+    function edit($id)
+    {
+        // TODO: Implement edit() method.
+    }
+
+    function update($id)
+    {
+        // TODO: Implement update() method.
+    }
+
+    function destroy($id)
+    {
+        // TODO: Implement destroy() method.
     }
 }
