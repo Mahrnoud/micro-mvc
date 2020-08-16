@@ -1,0 +1,20 @@
+{
+    "name": "mahmoud/test",
+    "description": "Test Micro Framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mahmoud Mohsen",
+            "email": "me@mahmoud-mohsen.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Database\\": "Database",
+            "Database\\Interfaces\\": "Database/Interfaces",
+            "Models\\": "Models"
+        }
+    }
+}
