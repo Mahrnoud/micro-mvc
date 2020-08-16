@@ -1,16 +1,19 @@
 <?php
-
+/**
+ * Composer Class Autoloader
+ */
 require __DIR__ . '/vendor/autoload.php';
 
-use Models\User;
+/**
+ * Application Bootstrap Class
+ */
+require_once __DIR__ . '/Bootstrap/App.php';
 
-$x = new User();
-$user = $x->select(['username'])
-            ->where('password', '=', 'password')
-            ->orderBy('id', 'DESC')
-            ->get();
+$app = new App;
 
-foreach ($user as $use){
 
-    echo $use[0].'<br>';
-}
+
+
+
+
+

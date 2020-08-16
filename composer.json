@@ -14,7 +14,8 @@
         "psr-4": {
             "Database\\": "Database",
             "Database\\Interfaces\\": "Database/Interfaces",
-            "Models\\": "Models"
+            "Models\\": "Models",
+            "Controllers\\": "Controllers"
         }
     }
 }
