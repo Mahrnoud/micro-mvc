@@ -8,21 +8,22 @@ trait Connect
 {
     /**
      * @var false|\mysqli
-     * Database info
      */
     protected $connect;
-    protected $server = 'localhost';
-    protected $username = 'root';
-    protected $password = '';
-    protected $database = 'micro';
+
 
     /**
      * Connect constructor.
      */
     public function __construct()
     {
-        // Create connection
-        $this->connect = mysqli_connect($this->server, $this->username, $this->password, $this->database);
+
+        /**
+         * Create Connection
+         * database($var) is helper function return string
+         */
+
+        $this->connect = mysqli_connect(database('hostname'), database('username'), database('password'), database('database'));
 
         // Check connection
         if (!$this->connect) {
